@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>FINABAN: Login/Cadastro</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1>FINABAN</h1>
+                <div id="fotologo"></div>
+		<!--<h2>Design by TheWebHub </h2>-->
+        </div>
+
+
+</div>
+ <div id="subbody">
+            <div id="box2colunas">
+                <div id ="colunaA">
+                    <div class="menu bubplastic vertical blue">
+                            <ul>
+
+                                    <li><span class="menu_r"><a href="home.xhtml"><span class="menu_ar">HOME</span></a></span></li>
+                                    <li><span class="menu_r"><a href="contatenos.xhtml"><span class="menu_ar">FALE CONOSCO</span></a></span></li>
+                                    <li><span class="menu_r"><a href="acessoregistro.xhtml"><span class="menu_ar">SERVIÇOS</span></a></span></li>
+                                    <li><span class="menu_r"><a href="acessoregistro.xhtml"><span class="menu_ar">ACESSO/NOVA CONTA</span></a></span></li>
+                            </ul>
+                        <br class="clearit" />
+                    </div>
+                </div>
+                <div id ="colunaB">
+                            <f:view>
+                               <h:body>
+                                        <h:form>
+                                            <h2>ACESSO/NOVA CONTA:</h2>
+                                            <div id="campos">
+                                            <br></br>
+                                            <h4>LOGIN:</h4>
+                                            <h:inputText value="#{userBean.login}" required="true"/>
+                                            <br></br>
+                                            <h4>SENHA:</h4>
+                                            <h:inputSecret value="#{userBean.password}" required="true"/>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <div id="botoes">
+                                            <h:commandButton value="Login" action="login"/><h:commandButton value="Novo" action="registro"/></div>
+                                            </div><div id="fotoLogin"></div>
+                                            <br></br>
+                                        </h:form>
+                                </h:body>
+                             </f:view>
+                     </div>
+                </div>
+        </div>
+
+	<div id="footer">
+		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
+	</div>
+</body>
+</html>
+
+
