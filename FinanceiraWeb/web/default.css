@@ -371,10 +371,22 @@ body {
 
 #foto {
     background: url(images/telefonista.jpg) no-repeat; /* Insere a imagem */
-    margin-left: 40%;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
     float: left;
-    width:50%;
-    height: 300px;
+    width:75%;
+    height: 400px;
+}
+
+#fotologinho {
+  background: rgb(242,248,244) url(images/finabinho.PNG) no-repeat; /* Insere a imagem */
+  height: 120px;
+  border-top: 3px solid #393939;
+  border-bottom: 5px solid #393939;
+  border-right: 5px solid #393939;
+  border-left:  0px solid #393939;
 }
 
 #fotoLogin {
@@ -411,3 +423,39 @@ body {
     margin-left: 15px;
 }
 
+#menu {
+	background: #333;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+        border-left:5px solid #393939;
+        border-right:2px solid #393939;
+}
+
+
+
+#menu li {
+	font: 100% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+        color: #fff;
+        margin: 0;
+	padding: 0;
+}
+
+#menu a {
+        background: rgb(59,154,212);
+	border-bottom: 3px solid #393939;
+	color: #fff;
+	display: block;
+        height: 30px;
+	margin: 0;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+#menu a:hover {
+	background: #2580a2 url("images/hover.gif") left center no-repeat;
+	color: #fff;
+	padding-bottom: 8px;
+}
