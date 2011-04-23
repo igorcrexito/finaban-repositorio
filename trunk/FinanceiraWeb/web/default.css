@@ -77,10 +77,35 @@ body {
 #colunaB {
 	width:83.15%;
 	background-color:#FFFFFF;
+        padding-top: 15px;
         text-align: justify;
-        padding: 0px 15px 15px 15px;
+        padding-left: 15px;
         padding-right: 45px;
         border-left: 3px solid black;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+	float:left;
+}
+
+#colunaImg1 {
+	width:41.5%;
+	background-color:#FFFFFF;
+        padding-top: 60px;
+        text-align: justify;
+        padding-left: 15px;
+        padding-bottom: 50px;
+        border-left: 3px solid black;
+        border-bottom: 3px solid black;
+	float:left;
+}
+
+#colunaImg2 {
+	width:41.65%;
+	background-color:#FFFFFF;
+        padding-top: 60px;
+        text-align: justify;
+        padding-right: 45px;
+        padding-bottom: 50px;
         border-right: 3px solid black;
         border-bottom: 3px solid black;
 	float:left;
@@ -288,4 +313,8 @@ body {
 	background: #2580a2 url("images/hover.gif") left center no-repeat;
 	color: #fff;
 	padding-bottom: 8px;
+}
+
+#caixaImagem {
+    margin-left: 25%;
 }
