@@ -8,14 +8,15 @@ Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippin
 
 body {
 
-	background: #c0c0c0 url(images/images01.jpg) repeat-x left top;
+        margin-left: 0%;
+        width: 100%;
+	background: rgb(249,244,240)  url(images/images01.jpg) repeat-x left top;
 	
 
 }
 
 #subbody {
     background: #FFFFFF repeat-x;
-    margin: 0px 100px 0px 100px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -23,6 +24,7 @@ body {
 
 #box2colunas {
     background: #FFFFFF repeat-x;
+    width: 100%;
     margin: 0px 0px 0px 0px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
@@ -33,10 +35,10 @@ body {
 /** LOGO */
 
 #logo {
-        margin-left: -150px;
+        margin-left: 0%;
 	height: 160px;
-        width: 95%;
-	background: url(images/logotipo.png) repeat-x left top;
+        width: 100%;
+	background: rgb(0,147,221);
         border-bottom: 10px solid black;
 }
 
@@ -59,13 +61,13 @@ body {
 }
 
 #content {
-	width: 860px;
+	width: 100%;
 	margin-top: 0px;
 	padding: 30px 20px 30px 20px;
 }
 
 #colunaA {
-	width:192px;
+	width:12.5%;
 	background-color:#000000;
 	float:left;
 
@@ -73,7 +75,7 @@ body {
 }
 
 #colunaB {
-	width:900px;
+	width:83.15%;
 	background-color:#FFFFFF;
         text-align: justify;
         padding: 0px 15px 15px 15px;
@@ -103,11 +105,6 @@ body {
 	line-height: 5em;
 }
 
-.box li a {
-	padding: 0px 0px 0px 12px;
-	background: url(images/images04.gif) no-repeat left 6px;
-	color: #717171;
-}
 
 .box a {
 	color: #717171;
@@ -153,195 +150,6 @@ body {
 
 /*        V2        */
 
-.clearit {
-	margin: 0;
-	padding: 0;
-	height: 0;
-	clear: both;
-}
-
-/* BUBBLE PLASTIC HORIZONTAL MENU */
-
-.bubplastic.horizontal {
-	width: 100%;
-	height: 27px;
-	margin: 0;
-	padding: 0;
-	background: #000000 url(images/bg-bubplastic.gif) top left repeat-x;
-}
-.bubplastic.horizontal ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.bubplastic.horizontal ul li {
-	float: left;
-	margin: 0;
-	padding: 0;
-	background: transparent url(images/bg-bubplastic-button.gif) top left no-repeat;
-}
-
-.bubplastic.horizontal ul li a {
-	display: block;
-	height: 27px;
-	padding-left: 35px;
-	float: left;
-	text-transform: uppercase;
-	font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
-	font-size: 70%;
-	color: #FFFFFF;
-	text-decoration: none;
-}
-
-.bubplastic.horizontal ul li a span.menu_ar {
-	display: block;
-	float: left;
-	height: 22px;
-	padding-top: 5px;
-	padding-right: 35px;
-	background: transparent url(images/bg-bubplastic-button.gif) top right no-repeat;
-	cursor: pointer;
-}
-/* END BUBBLE PLASTIC HORIZONTAL MENU */
-
-
-
-/* BUBBLE PLASTIC VERTICAL MENU */
-
-.bubplastic.vertical {
-	width: 125px;
-	margin: 0px;
-	padding: 0px;
-	display: block;
-}
-.bubplastic.vertical ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.bubplastic.vertical ul li {
-	display: block;
-	float: left;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	background: transparent url(images/bg-bubplastic-button.gif) top left no-repeat;
-}
-
-.bubplastic.vertical ul li a {
-	display: block;
-	margin: 0;
-	width: 100%;
-	padding-left: 35px;
-	text-transform: uppercase;
-	font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
-	font-size: 80%;
-	color: #FFFFFF;
-	text-decoration: none;
-	background: transparent url(images/bg-bubplastic-button.gif) top left no-repeat;
-}
-
-.bubplastic.vertical ul li a span.menu_ar {
-	display: block;
-	margin: 0;
-	width: 100%;
-	height: 40px;
-	padding-top: 5px;
-	padding-right: 35px;
-	background: transparent url(images/bg-bubplastic-button.gif) top right no-repeat;
-	cursor: pointer;
-}
-/* END BUBBLE PLASTIC VERTICAL MENU */
-
-
-
-/* AQUA HOVER */
-.bubplastic.aqua ul li a:hover,
-.bubplastic.aqua ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-aqua.gif) top left no-repeat;
-}
-.bubplastic.aqua ul li a:hover span.menu_ar,
-.bubplastic.aqua ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-aqua.gif) top right no-repeat;
-}
-
-
-/* BLUE HOVER */
-.bubplastic.blue ul li a:hover,
-.bubplastic.blue ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-blue.gif) top left no-repeat;
-}
-.bubplastic.blue ul li a:hover span.menu_ar,
-.bubplastic.blue ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-blue.gif) top right no-repeat;
-}
-
-
-/* GRAY HOVER */
-.bubplastic.gray ul li a:hover,
-.bubplastic.gray ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-gray.gif) top left no-repeat;
-}
-.bubplastic.gray ul li a:hover span.menu_ar,
-.bubplastic.gray ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-gray.gif) top right no-repeat;
-}
-
-
-/* LIME HOVER */
-.bubplastic.lime ul li a:hover,
-.bubplastic.lime ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-lime.gif) top left no-repeat;
-}
-.bubplastic.lime ul li a:hover span.menu_ar,
-.bubplastic.lime ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-lime.gif) top right no-repeat;
-}
-
-
-/* ORANGE HOVER */
-.bubplastic.orange ul li a:hover,
-.bubplastic.orange ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-orange.gif) top left no-repeat;
-}
-.bubplastic.orange ul li a:hover span.menu_ar,
-.bubplastic.orange ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-orange.gif) top right no-repeat;
-}
-
-
-/* PINK HOVER */
-.bubplastic.pink ul li a:hover,
-.bubplastic.pink ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-pink.gif) top left no-repeat;
-}
-.bubplastic.pink ul li a:hover span.menu_ar,
-.bubplastic.pink ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-pink.gif) top right no-repeat;
-}
-
-
-/* PURPLE HOVER */
-.bubplastic.purple ul li a:hover,
-.bubplastic.purple ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-purple.gif) top left no-repeat;
-}
-.bubplastic.purple ul li a:hover span.menu_ar,
-.bubplastic.purple ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-purple.gif) top right no-repeat;
-}
-
-
-/* RED HOVER */
-.bubplastic.red ul li a:hover,
-.bubplastic.red ul li.highlight a {
-	background: transparent url(images/bg-bubplastic-h-red.gif) top left no-repeat;
-}
-.bubplastic.red ul li a:hover span.menu_ar,
-.bubplastic.red ul li.highlight a span.menu_ar {
-	background: transparent url(images/bg-bubplastic-h-red.gif) top right no-repeat;
-}
 
 /** FOOTER */
 
@@ -371,8 +179,8 @@ body {
 
 #foto {
     background: url(images/telefonista.jpg) no-repeat; /* Insere a imagem */
-    margin-left: 15%;
-    margin-top: 20px;
+    margin-left: 22%;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-bottom: 40px;
     float: left;
@@ -402,7 +210,7 @@ body {
     background: url(images/logo2.jpg) no-repeat; /* Insere a imagem */
     position: absolute;
     margin-top: 0px;
-    margin-left: 75.9%;
+    margin-left: 66.2%;
     width: 500px;
     float: right;
     border-bottom: 10px solid black;
@@ -410,35 +218,36 @@ body {
 }
 
 #fotologo2 {
-    background: url(images/logoFeito.png) no-repeat; /* Insere a imagem */
+    background: url(images/logonovo.jpg) no-repeat; /* Insere a imagem */
     position: absolute;
-    margin-top: 5px;
-    margin-left: 17%;
-    width: 300px;
+    margin-top: 0px;
+    margin-left: 12.5%;
+    width: 87.4%;
     float: right;
+    border-left: 3px solid black;
     border-bottom:0px solid black;
-    height: 140px;
+    height: 159px;
 }
 
 #fotoFinaban {
     background: url(images/Finaban.jpg) no-repeat; /* Insere a imagem */
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 10px;
-    margin-left: 20%;
+    margin-left: 28%;
     float: left;
-    width: 100%;
+    width: 50%;
     height: 300px;
 }
 
 #fotoservicos {
     background: url(images/fotoservicos.png) no-repeat; /* Insere a imagem */
-    margin-left: 15%;
+    margin-left: 28%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-bottom: 40px;
     float: left;
-    width:75%;
-    height: 400px;
+    width:50%;
+    height: 300px;
 }
 
 #botoes {
@@ -453,7 +262,6 @@ body {
 	padding: 0;
 	width: 200px;
         border-left:3px solid #393939;
-        border-right:2px solid #393939;
 }
 
 
