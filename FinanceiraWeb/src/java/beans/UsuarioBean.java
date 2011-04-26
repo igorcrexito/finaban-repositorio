@@ -19,6 +19,7 @@ public class UsuarioBean {
     /** Creates a new instance of UsuarioBean */
     private String login;
     private String password;
+    private int nivelAcesso;
 
     public UsuarioBean() {
     }
@@ -44,4 +45,12 @@ public class UsuarioBean {
         this.password = password;
     }
 
+    public int getNivelAcesso() {
+        return nivelAcesso;
+    }
+
+    public void setNivelAcesso(int nivelAcesso) {
+        this.nivelAcesso = nivelAcesso;
+    }
+    
 }
