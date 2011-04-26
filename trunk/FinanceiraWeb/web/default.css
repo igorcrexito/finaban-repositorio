@@ -39,7 +39,7 @@ body {
 /** CONTENT */
 
 #colunaA {
-	width:12.5%;
+	width:15.5%;
 	background-color:#000000;
 	float:left;
 
@@ -47,7 +47,7 @@ body {
 }
 
 #colunaB {
-	width:83.0%;
+	width:80.0%;
 	background-color:#FFFFFF;
         padding-top: 1%;
         text-align: justify;
@@ -60,7 +60,7 @@ body {
 }
 
 #colunaImg1 {
-	width:41.5%;
+	width:40%;
 	background-color:#FFFFFF;
         padding-top: 60px;
         text-align: justify;
@@ -72,7 +72,7 @@ body {
 }
 
 #colunaImg2 {
-	width:41.5%;
+	width:40%;
 	background-color:#FFFFFF;
         padding-top: 60px;
         text-align: justify;
@@ -178,7 +178,7 @@ body {
     background: url(images/telefonista.jpg) no-repeat; /* Insere a imagem */
     margin-left: 22%;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 35px;
     padding-bottom: 2%;
     float: left;
     width:60%;
@@ -187,6 +187,7 @@ body {
 
 #fotologinho {
   background: rgb(242,248,244) url(images/finabinho.PNG) no-repeat; /* Insere a imagem */
+  background-position: center;
   height: 120px;
   border-top: 3px solid #393939;
   border-bottom: 5px solid #393939;
@@ -215,21 +216,17 @@ body {
 }
 
 #fotologo2 {
-    background: url(images/logonovo.jpg) no-repeat; /* Insere a imagem */
-
-    margin-top: 0px;
-    margin-left: 12.5%;
-    width: 87.4%;
-    float: right;
-    border-left: 3px solid black;
-    border-bottom:0px solid black;
+    background: rgb(127,188,225) url(images/logonovo.jpg) no-repeat; /* Insere a imagem */
+    width: 100%;
+    background-position: left;
+    float: left;
     height: 159px;
 }
 
 #fotoFinaban {
     background: url(images/Finaban.jpg) no-repeat; /* Insere a imagem */
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     margin-left: 28%;
     float: left;
     width: 50%;
@@ -240,7 +237,7 @@ body {
     background: url(images/fotoservicos.png) no-repeat; /* Insere a imagem */
     margin-left: 28%;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     padding-bottom: 40px;
     float: left;
     width:50%;
@@ -264,7 +261,7 @@ body {
 
 
 #menu li {
-	font: 100% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font: 90% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
 	font-weight: bold;
         color: #fff;
         margin: 0;
@@ -272,7 +269,7 @@ body {
 }
 
 #menu a {
-        background: rgb(59,154,212);
+        background: rgb(133,158,187);
 	border-bottom: 3px solid #393939;
 	color: #fff;
 	display: block;
@@ -282,11 +279,16 @@ body {
 	text-decoration: none;
 }
 #menu a:hover {
-	background: #2580a2 url("images/hover.gif") left center no-repeat;
+	background: rgb(33,101,141) url("images/hover.gif") left center no-repeat;
 	color: #fff;
 	padding-bottom: 8px;
 }
 
 #caixaImagem {
     margin-left: 25%;
+}
+
+#titulo {
+    margin-top: -45px;
+    margin-left: 10px;
 }
