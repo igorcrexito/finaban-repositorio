@@ -7,8 +7,48 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<script type="text/javascript">
+         //<![CDATA[
+
+	   c=0
+		du="";
+	   function escondediv(dv,n){
+
+		   for(i=1;i<=n;i++){
+			   if(i==dv ){
+				   if(du!=dv){
+				      document.getElementById('mdiv'+i).style.display="inline"
+					   du=dv
+					}else{
+					   du=""
+					   document.getElementById('mdiv'+i).style.display="none"
+					}
+			   }else{
+				     document.getElementById('mdiv'+i).style.display="none"
+			   }
+
+			}
+		}
+
+	function reveza(qq){
+	  document.getElementById(qq).className="itens_menu_r"
+	}
+	function volta(qq){
+	  document.getElementById(qq).className="itens_menu"
+	}
+        //]]>
+	</script>
+
 </head>
 <body>
+
+
+      <script>
+        //Coloque aqui o número de itens de menu
+        n_divs='5'
+      </script>
+
 <div id="header">
     <div id="logo">
                 <div id="fotologo2">
@@ -22,18 +62,31 @@
             <div id="box2colunas">
                 <div id ="colunaA">
                     <ul id="menu">
-                        <li><a href="index.xhtml" title="Home">PÁGINA INICIAL</a></li>
-                        <li><a href="home.xhtml" title="Home">QUEM SOMOS</a></li>
-                        <li><a href="contatenos.xhtml" title="Fale Conosco">FALE CONOSCO</a></li>
-                        <li><a href="#" title="Serviços">SERVIÇOS</a>
+                        <div class="titulo_menu"  ><a href="index.xhtml" class="link_menu" title="Home">PÁGINA INICIAL</a></div>
+                        <div class="titulo_menu"  ><a href="home.xhtml" class="link_menu" title="Home">SOCIEDADE</a></div>
+                        <div class="titulo_menu"  ><a href="contatenos.xhtml" class="link_menu" title="Fale Conosco">FALE CONOSCO</a></div>
+                        <div class="titulo_menu"  ><a href="javascript:void(escondediv('1',n_divs))" class="link_menu" >O FACTORING</a></div>
+                        <div id="mdiv1"  style="display:none">
                         <ul>
-                            <li><a href="servicos.xhtml">SubmenuServiços</a></li>
-                            <li><a href="servicos.xhtml">SubmenuServiços</a></li>
-                            <li><a href="servicos.xhtml">SubmenuServiços</a></li>
-                            <li><a href="servicos.xhtml">SubmenuServiços</a></li>
-                            <li><a href="servicos.xhtml">SubmenuServiços</a></li>
-                        </ul> </li>
-                        <li><a href="acessoregistro.xhtml" title="Acesso/Registro">ACESSO/REGISTRO</a></li>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Introdução</a></td></li>
+                        <li><td class="itens_menu" ><a href="#" class="link_menu" target="alvo">Gestão</a></td></li>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Antecipação</a></td></li>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Custos</a></td></li>
+                        </ul>
+                        </div>
+                        <div class="titulo_menu"  ><a href="#" class="link_menu" >LEGISLAÇÃO</a></div>
+                        <div class="titulo_menu"  ><a href="javascript:void(escondediv('2',n_divs))" class="link_menu" >PRODUTOS</a></div>
+                        <div id="mdiv2"  style="display:none">
+                        <ul>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Pro-sabendo</a></td></li>
+                        <li><td class="itens_menu" ><a href="#" class="link_menu" target="alvo">Pro-soluto com udificação</a></td></li>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Pro-soluto sem udificação</a></td></li>
+                        <li><td class="itens_menu" ><a href="#" class="link_menu" target="alvo">Maturity Factoring</a></td></li>
+                        <li><td class="itens_menu"><a href="#" class="link_menu" target="alvo">Import - Export</a></td></li>
+                        </ul>
+                        </div>
+
+                        <div class="titulo_menu"  ><a href="acessoregistro.xhtml" class="link_menu" title="Acesso/Registro">ACESSO/REGISTRO</a></div>
                         <div id="fotologinho"></div>
                     </ul>
                 </div>
