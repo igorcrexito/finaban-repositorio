@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Menu SubNivel</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <style type="text/css">
+		/**********************************************************************
+		*  A estilização está na mesma página para fins didático
+		*  Tem algumas modificações na parte estética no menu
+		*  mais o funcionamento não foi modificado
+		* *********************************************************************
+		*/
+		
+		/**
+		 * Zerar o Margin e Padding e todos os elementos na página
+		 */
+		*{
+		   margin:0;
+		   padding:0;
+		}
+		/*remove a marcação da lista*/
+		ul{list-style-type:none}
+		/*remove o underline no link por padrão*/
+		a{text-decoration:none}
+		/*ao passar o mouse volta o underline*/
+		a:hover{text-decoration:underline}
+		
+		/**********************************************************************
+		*CONFIGURAÇÕES MENU - Estilização
+		* *********************************************************************
+		* /
+		
+		/*define uma largura*/		
+		#menu{width:150px; border:1px solid #ccc;}
+		/*Define um position relative porque iremos utilizar
+		 * absolute nas sub-listas
+		**/
+		#menu li{
+			position:relative;
+			_float:left;/*Hack para o IE6*/
+		}
+		
+		#menu li a{
+		   display:block; /*define o elemento em bloco para ocupar 100% de largura do elemento pai*/
+		   height:25px; /*Define uma altura*/
+		   line-height:25px;/*Cenraliza na vertical */
+		   color:#777; /*define a cor da fonte*/
+		   border-bottom:1px solid #ccc; /*define uma bordar no bottom*/
+		   background:#f5f5f5;/*define a cor do fundo*/
+		   
+		}
+		#menu li a:hover{
+		   background:#e5e5e5;/*define a cor do fundo*/
+		   color:#333;/*define a cor da fonte*/
+		}
+		
+		/*******************************************************************
+		 *VAMOS COMEÇAR A MAGIA - Aqui agrupei alguns item
+		*********************************************************************
+		*/
+		
+		#menu li ul, #menu li:hover ul ul{
+		   display:none;/*define para não aparecer a ul*/
+		   position:absolute; /*define uma posição absolute*/
+		   width:150px;/*define uma largura*/
+		   top:0; /*colocamos top com 0*/
+		   left:150px; /*afastamos 150px a esquerda*/
+		   border:1px solid #ccc;/*define uma borda*/
+		}
+		/*É agora que vamos mostrar o menu, declarano*/
+		#menu li:hover ul,
+		#menu ul li:hover ul{
+		   display:block;
+		}
+		
+	 </style>
+</head>
+<body>
+   <ul id="menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Serviços</a>
+			<ul>
+				<li><a href="#">Web</a></li>
+				<li><a href="#">SEO</a></li>
+				<li><a href="#">Gráfico</a>
+					<ul>
+						<li><a href="#">Cartão</a></li>
+						<li><a href="#">Panfleto</a></li>
+						<li><a href="#">Banner</a></li>
+					</ul>
+				</li>
+		   </ul>
+		</li>
+		<li><a href="#">Produtos</a></li>
+		<li><a href="#">Contato</a></li>
+  </ul>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+   <script type="text/javascript">
+	 $(document).ready(function(){
+	      $("#menu li").hover(function(){
+				$(this).find('ul:first').css('display', 'block');
+			}, function(){
+				$(this).find('ul:first').css('display', 'none');
+			});
+	});
+   </script>
+</body>
+</html>
