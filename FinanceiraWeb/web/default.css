@@ -268,6 +268,38 @@ body {
 	padding: 0;
 }
 
+#menu ul {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#menu ul li {
+    position: relative;
+}
+
+#menu li ul {
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+#menu ul li a {
+    font: 90% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(100,100,100);
+    display: block;
+    background: rgb(238,238,236);
+    padding: 5px;
+    padding-left: 15px;
+    border-right: 3px solid black;
+    border-bottom: 1px solid black;
+    }
+
 #menu a {
         background: rgb(133,158,187);
 	border-bottom: 3px solid #393939;
@@ -278,11 +310,17 @@ body {
 	padding: 8px 12px;
 	text-decoration: none;
 }
+
+#menu li:hover ul {
+    display: block;
+}
+
 #menu a:hover {
 	background: rgb(33,101,141) url("images/hover.gif") left center no-repeat;
 	color: #fff;
 	padding-bottom: 8px;
 }
+
 
 #caixaImagem {
     margin-left: 25%;
