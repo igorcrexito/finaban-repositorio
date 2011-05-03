@@ -1,16 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>FINABAN: Login/Cadastro</title>
+<title>FINABAN: Serviços</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" media="screen" />
 
-<!--<script type="text/javascript" src="/js/menu.js"></script>-->
+<!--<script type="text/javascript" src="/js/menu.js"></script> -->
 	<script type="text/javascript">
          //<![CDATA[
 
@@ -41,16 +39,17 @@
 	  document.getElementById(qq).className="itens_menu"
 	}
         //]]>
-	</script> 
+	</script>
 
 </head>
 <body>
 
-    <script>
+
+      <script>
         //Coloque aqui o número de itens de menu
         n_divs='5'
       </script>
-    
+
 <div id="header">
     <div id="logo">
                 <div id="fotologo2">
@@ -64,7 +63,7 @@
             <div id="box2colunas">
                 <div id ="colunaA">
                     <ul id="menu">
-                         <div class="titulo_menu"  ><a href="index.xhtml" class="link_menu" title="Home">PÁGINA INICIAL</a></div>
+                        <div class="titulo_menu"  ><a href="index.xhtml" class="link_menu" title="Home">PÁGINA INICIAL</a></div>
                         <div class="titulo_menu"  ><a href="home.xhtml" class="link_menu" title="Home">SOCIEDADE</a></div>
                         <div class="titulo_menu"  ><a href="contatenos.xhtml" class="link_menu" title="Fale Conosco">FALE CONOSCO</a></div>
                         <div class="titulo_menu"  ><a href="javascript:void(escondediv('1',n_divs))" class="link_menu" >O FACTORING</a></div>
@@ -93,28 +92,34 @@
                     </ul>
                 </div>
                 <div id ="colunaB">
-                            <f:view>
-                               <h:body>
-                                        <h:form>
-                                            <h2>ACESSO/NOVA CONTA:</h2>
-                                            <div id="campos">
-                                            <br></br>
-                                            <h4>LOGIN:</h4>
-                                            <h:inputText value="#{userBean.login}" required="true"/>
-                                            <br></br>
-                                            <h4>SENHA:</h4>
-                                            <h:inputSecret value="#{userBean.password}" required="true"/>
-                                            <br></br>
-                                            <br></br>
-                                            <br></br>
-                                            <div id="botoes">
-                                            <h:commandButton value="Login" action="login"/><h:commandButton value="Novo" action="registro"/></div>
-                                            </div><div id="fotoLogin"></div>
-                                            <br></br>
-                                        </h:form>
-                                </h:body>
-                             </f:view>
-                     </div>
+                        <h2>IMPORT - EXPORT:</h2>
+			<div class="box1">
+                                <ul>
+					<li>&raquo;&nbsp;<strong>FINABAN:</strong> Factorit SpA was founded in December 1978 by a group of Italian Cooperative Banks. Today it is one of the foremost Italian player in the factoring market not only by volumes but also by technological innovation, professionalism and flexibility.
+
+The company's wide range of products is dedicated both to enterprises acting in national and international markets. In facts, further to the basic mix of factoring services: Receivables Financing, Credit Protection and Receivables Management, Factorit Spa offers a set of special products tailored to the needs of some important industrial and trading sectors.
+
+Factorit Spa has a nationwide presence made of 8 branches (Bologna, Firenze, Genova, Milano, Napoli, Padova, Roma and Torino).
+Its factoring services are also distributed through more than 8.000 counters of the associated Cooperative Banks (Banche Popolari).
+
+Factorit Spa is strongly committed in promoting international factoring transactions and is a member of Factors Chain International, a worldwide network of factors.
+                                        The company's wide range of products is dedicated both to enterprises acting in national and international markets. In facts, further to the basic mix of factoring services: Receivables Financing, Credit Protection and Receivables Management, Factorit Spa offers a set of special products tailored to the needs of some important industrial and trading sectors.
+
+Factorit Spa has a nationwide presence made of 8 branches (Bologna, Firenze, Genova, Milano, Napoli, Padova, Roma and Torino).
+Its factoring services are also distributed through more than 8.000 counters of the associated Cooperative Banks (Banche Popolari).
+
+Factorit Spa is strongly committed in promoting international factoring transactions and is a member of Factors Chain International, a worldwide network of factors.
+The company's wide range of products is dedicated both to enterprises acting in national and international markets. In facts, further to the basic mix of factoring services: Receivables Financing, Credit Protection and Receivables Management, Factorit Spa offers a set of special products tailored to the needs of some important industrial and trading sectors.
+
+Factorit Spa has a nationwide presence made of 8 branches (Bologna, Firenze, Genova, Milano, Napoli, Padova, Roma and Torino).
+Its factoring services are also distributed through more than 8.000 counters of the associated Cooperative Banks (Banche Popolari).
+
+Factorit Spa is strongly committed in promoting international factoring transactions and is a member of Factors Chain International, a worldwide network of factors.
+                                        </li>
+				</ul>
+			</div>
+                        <div id="fotoservicos"></div>
+                    </div>
                 </div>
         </div>
 
@@ -123,5 +128,3 @@
 	</div>
 </body>
 </html>
-
-
