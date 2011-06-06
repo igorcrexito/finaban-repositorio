@@ -5,6 +5,7 @@
 
 package beans;
 
+import conexao.UsuarioDAO;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -16,6 +17,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class UsuarioBean {
 
+    private UsuarioDAO userDao;
     /** Creates a new instance of UsuarioBean */
     private String login;
     private String password;
@@ -51,6 +53,18 @@ public class UsuarioBean {
 
     public void setNivelAcesso(int nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
+    }
+
+    public UsuarioDAO getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UsuarioDAO userDao) {
+        this.userDao = userDao;
+    }
+
+    public void checaUsuario (String login, String senha) {
+
     }
     
 }

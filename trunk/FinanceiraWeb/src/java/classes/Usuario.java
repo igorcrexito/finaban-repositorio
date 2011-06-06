@@ -13,12 +13,14 @@ public class Usuario {
 
     private String login;
     private String password;
+    private String nome;
     private int nivelAcesso;
 
-    public Usuario(String log, String pass, int nivelAcesso) {
+    public Usuario(String log, String pass, int nivelAcesso, String nome) {
         this.login = log;
         this.password = pass;
         this.nivelAcesso = nivelAcesso;
+        this.nome = nome;
     }
 
     public String getLogin() {
@@ -27,6 +29,14 @@ public class Usuario {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getNivelAcesso() {
