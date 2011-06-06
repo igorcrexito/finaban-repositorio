@@ -109,9 +109,16 @@
                                             <br></br>
                                             <div id="botoes">
                                             <h:commandButton value="Login" action="#{userBean.checaUsuario}"/><h:commandButton value="Novo" action="login"/></div>
+                                            
                                             </div><div id="fotoLogin"></div>
                                             <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <div id="textoErro">
+                                                <h:outputLabel value="#{userBean.erro}"/>
+                                     </div>
                                         </h:form>
+                                   
                                 </h:body>
                              </f:view>
                      </div>

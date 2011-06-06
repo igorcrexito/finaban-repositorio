@@ -331,6 +331,14 @@ body {
     margin-left: 10px;
 }
 
+#textoErro {
+    margin-top: 300px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255,0,0);
+}
+
 /*+++++++++++++++ RELATIVO AS CATEGORIAS +++++++++++++++++++++*/
 
 	/**** LINKS DOS NOMES DAS CATEGORIAS ****/
