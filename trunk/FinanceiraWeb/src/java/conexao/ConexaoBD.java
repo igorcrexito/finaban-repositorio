@@ -60,9 +60,11 @@ public class ConexaoBD{
             conexao = DriverManager.getConnection(URL, usuario, senha);
             //JOptionPane.showMessageDialog(null,"Conectou");
         }catch(ClassNotFoundException Driver){
+            System.out.println("conexao certa");
             JOptionPane.showMessageDialog(null,"Driver não localizado: " + Driver);
             result = false;
         }catch(SQLException fonte){
+            System.out.println("erro conexao");
             JOptionPane.showMessageDialog(null, "Deu erro na conexão com a fonte de dados" + fonte);
             result = false;
         }
