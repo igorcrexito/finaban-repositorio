@@ -39,7 +39,7 @@ body {
 /** CONTENT */
 
 #colunaA {
-	width:15.5%;
+	width:17.5%;
 	background-color:#000000;
 	float:left;
 
@@ -47,7 +47,7 @@ body {
 }
 
 #colunaB {
-	width:80.0%;
+	width:77.9%;
 	background-color:#FFFFFF;
         padding-top: 1%;
         text-align: justify;
@@ -60,7 +60,7 @@ body {
 }
 
 #colunaImg1 {
-	width:40%;
+	width:38.9%;
 	background-color:#FFFFFF;
         padding-top: 60px;
         text-align: justify;
@@ -72,7 +72,7 @@ body {
 }
 
 #colunaImg2 {
-	width:40%;
+	width:38.9%;
 	background-color:#FFFFFF;
         padding-top: 60px;
         text-align: justify;
