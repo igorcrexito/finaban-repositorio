@@ -26,6 +26,7 @@ public class UsuarioBean {
     private String login;
     private String password;
     private int nivelAcesso;
+    private String nome;
     private String erro="";
 
     public UsuarioBean() {
@@ -69,10 +70,18 @@ public class UsuarioBean {
         this.erro = erro;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    
+
     public String checaUsuario () {
         Usuario usuario=null;
-        System.out.println(login);
-        System.out.println(password);
         UsuarioDAO userDao = new UsuarioDAO();
         try {
             usuario = userDao.getUsuariosFromLoginSenha(login, password);
@@ -84,8 +93,9 @@ public class UsuarioBean {
             login = usuario.getLogin();
             password = usuario.getPassword();
             nivelAcesso = usuario.getNivelAcesso();
+            nome = usuario.getNome();
             erro = null;
-            return "servicos.xhtml";
+            return "pagadministrador.xhtml";
         } else {
             erro = "Senha ou Login incorreto(s)";
             return "";
