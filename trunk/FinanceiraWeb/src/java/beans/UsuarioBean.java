@@ -26,6 +26,7 @@ public class UsuarioBean {
     private String login;
     private String password;
     private int nivelAcesso;
+    private String erro="";
 
     public UsuarioBean() {
     }
@@ -60,14 +61,20 @@ public class UsuarioBean {
         this.nivelAcesso = nivelAcesso;
     }
 
+    public String getErro() {
+        return erro;
+    }
 
-    public void checaUsuario () {
+    public void setErro(String erro) {
+        this.erro = erro;
+    }
+
+    public String checaUsuario () {
         Usuario usuario=null;
         System.out.println(login);
         System.out.println(password);
         UsuarioDAO userDao = new UsuarioDAO();
         try {
-
             usuario = userDao.getUsuariosFromLoginSenha(login, password);
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -77,7 +84,13 @@ public class UsuarioBean {
             login = usuario.getLogin();
             password = usuario.getPassword();
             nivelAcesso = usuario.getNivelAcesso();
+            erro = null;
+            return "servicos.xhtml";
+        } else {
+            erro = "Senha ou Login incorreto(s)";
+            return "";
         }
+
     }
     
 }
