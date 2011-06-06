@@ -8,7 +8,6 @@ package conexao;
 import classes.Usuario;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  *
@@ -18,27 +17,26 @@ public class UsuarioDAO {
     
     private ConexaoBD conexao;
 
-    public UsuarioDAO(ConexaoBD conexao) {
-       this.conexao = conexao;
+    public UsuarioDAO() {
+       conexao = ConexaoBD.getConexaoBD();
     }
 
 
     public Usuario getUsuariosFromLoginSenha (String login, String senha) throws SQLException {
 
-        Usuario user = null;
 
         String SQL_string = "SELECT * FROM usuario WHERE " +
-                "login LIKE '%" + login + "%' && password LIKE'%" +senha+"%&'";
+                "LOGIN LIKE'%" + login + "%'" + "AND SENHA LIKE '%"+senha+"%'";
 
         ResultSet rs= conexao.executeSql(SQL_string);
+        rs.first();
 
+        String nome = rs.getString("nome");
+        int nivelAcesso = rs.getInt("nivelAcesso");
 
-            String nome = rs.getString("nome");
-            int nivelAcesso = rs.getInt("nivelAcesso");
-            user = new Usuario(login,senha,nivelAcesso,nome);
         
         if (nome!=null || !nome.equals("")) {
-            return user;
+            return new Usuario(login,senha,nivelAcesso,nome);
         } else {
             return null;
         }

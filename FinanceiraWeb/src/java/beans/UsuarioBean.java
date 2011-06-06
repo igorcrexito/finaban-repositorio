@@ -5,7 +5,11 @@
 
 package beans;
 
+import classes.Usuario;
 import conexao.UsuarioDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -17,7 +21,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class UsuarioBean {
 
-    private UsuarioDAO userDao;
+    
     /** Creates a new instance of UsuarioBean */
     private String login;
     private String password;
@@ -27,6 +31,7 @@ public class UsuarioBean {
     }
 
     public UsuarioBean(String login, String password) {
+
         this.login = login;
         this.password = password;
     }
@@ -55,16 +60,24 @@ public class UsuarioBean {
         this.nivelAcesso = nivelAcesso;
     }
 
-    public UsuarioDAO getUserDao() {
-        return userDao;
-    }
 
-    public void setUserDao(UsuarioDAO userDao) {
-        this.userDao = userDao;
-    }
+    public void checaUsuario () {
+        Usuario usuario=null;
+        System.out.println(login);
+        System.out.println(password);
+        UsuarioDAO userDao = new UsuarioDAO();
+        try {
 
-    public void checaUsuario (String login, String senha) {
-
+            usuario = userDao.getUsuariosFromLoginSenha(login, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if (usuario!=null) {
+            login = usuario.getLogin();
+            password = usuario.getPassword();
+            nivelAcesso = usuario.getNivelAcesso();
+        }
     }
     
 }
