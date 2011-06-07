@@ -352,7 +352,16 @@ body {
 
 #textoErro {
     margin-top: 300px;
+    margin-left: 35%;
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: rgb(255,0,0);
+}
+
+#textoErroNovo {
+    margin-top: 320px;
     margin-left: 40%;
+    font-size: 20px;
     margin-bottom: 20px;
     font-weight: bold;
     color: rgb(255,0,0);
