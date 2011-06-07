@@ -25,6 +25,7 @@ public class UsuarioBean {
     /** Creates a new instance of UsuarioBean */
     private String login;
     private String password;
+    private String passwordConfirmar;
     private int nivelAcesso;
     private String nome;
     private String erro="";
@@ -78,7 +79,17 @@ public class UsuarioBean {
         this.nome = nome;
     }
 
+     public String getPasswordConfirmar() {
+        return passwordConfirmar;
+    }
+
+    public void setPasswordConfirmar(String passwordConfirmar) {
+        this.passwordConfirmar = passwordConfirmar;
+    }
     
+    public void inserirUsuario(){
+        
+    }
 
     public String checaUsuario () {
         Usuario usuario=null;

@@ -244,6 +244,15 @@ body {
     height: 300px;
 }
 
+#fotoAddUser {
+    background: url(images/adduser.jpg) no-repeat; /* Insere a imagem */
+    margin-left: 50%;
+    margin-top: -250px;
+    float: left;
+    width:25%;
+    height: 250px;
+}
+
 #botoes {
     margin-left: 15px;
 }
@@ -266,6 +275,16 @@ body {
         color: #fff;
         margin: 0;
 	padding: 0;
+}
+
+#texto {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#criarEspaco {
+    float: right;
+    margin-left: 10px;
 }
 
 #menu ul {/** submenu **/

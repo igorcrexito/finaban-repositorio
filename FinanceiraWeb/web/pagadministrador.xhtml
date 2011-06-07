@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -93,15 +94,41 @@
                     </ul>
                 </div>
                 <div id ="colunaB">
-                    <h2>ADMINISTRADOR:</h2><div id="textoLogin"><h:outputLabel value="Olá, #{userBean.nome}"/></div>
-			<div class="box1">
-                                <ul>
-					<li>&raquo;&nbsp;<strong>ADMINISTRADOR:</strong> Nesta página, os campos referentes às páginas podem ser alterados.
-                                            Além disso, pode ser feito o cadastro de novos usuários</li>
-				</ul>
+                    <h2>PÁGINA DO ADMINISTRADOR</h2><div id="textoLogin"><h:outputLabel value="Olá, #{userBean.nome}"/></div>
+			
 
-			</div>
-                        <div id="fotoservicos"></div>
+                        <f:view>
+                               <h:body>
+                                        <h:form>
+                                            <h3> Criar Usuário:</h3>
+                                            <div id="campos">
+                                            <br></br>
+                                            <div id="texto"> <h:outputLabel value="Login:"/>
+                                            <div id="criarEspaco"> <h:inputText value="#{userBean.login}" required="true"/></div></div>
+                                            <br></br>
+                                            <div id="texto"> <h:outputLabel value="Senha:" />
+                                            <div id="criarEspaco"> <h:inputSecret value="#{userBean.password}" required="true"/></div></div>
+                                            <br></br>
+                                            <div id="texto"> <h:outputLabel value="Confirme senha:" /> 
+                                            <div id="criarEspaco"> <h:inputSecret value="#{userBean.passwordConfirmar}" required="true"/></div></div>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <div id="botoes">
+                                            <h:commandButton value="Novo" action="#{userBean.inserirUsuario}"/></div>
+
+                                            </div>
+                                            <div id="fotoAddUser"></div>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <div id="textoErro">
+                                                <h:outputLabel value="#{userBean.erro}"/>
+                                     </div>
+                                        </h:form>
+
+                                </h:body>
+                             </f:view>
                     </div>
                 </div>
         </div>
