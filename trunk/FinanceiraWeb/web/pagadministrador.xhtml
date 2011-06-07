@@ -106,30 +106,30 @@
                                             <div id="campos">
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Nome:"/>
-                                            <div id="criarEspaco"> <h:inputText value="#{userBean.nome}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputText value="#{newUserBean.nome}" required="true"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Login:"/>
-                                            <div id="criarEspaco"> <h:inputText value="#{userBean.login}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputText value="#{newUserBean.login}" required="true"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Senha:" />
-                                            <div id="criarEspaco"> <h:inputSecret value="#{userBean.password}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputSecret value="#{newUserBean.password}" required="true"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Confirme senha:" /> 
-                                            <div id="criarEspaco"> <h:inputSecret value="#{userBean.passwordConfirmar}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputSecret value="#{newUserBean.passwordConfirmar}" required="true"/></div></div>
                                             <br></br>
                                             <br></br>
                                             <br></br>
                                             <div id="botoes">
-                                            <h:commandButton value="Novo" action="#{userBean.inserirUsuario}"/></div>
+                                                <h:commandButton value="Novo" action="#{newUserBean.criaNovoUsuario}"/></div>
 
                                             </div>
                                             <div id="fotoAddUser"></div>
                                             <br></br>
                                             <br></br>
                                             <br></br>
-                                            <div id="textoErro">
-                                                <h:outputLabel value="#{userBean.erro}"/>
-                                     </div>
+                                            <div id="textoErroNovo">
+                                                <h:outputLabel value="#{newUserBean.erro}"/>
+                                            </div>
                                         </h:form>
 
                                 </h:body>

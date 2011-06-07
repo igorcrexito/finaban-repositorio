@@ -34,8 +34,12 @@ public class NovoUsuarioBean {
     }
 
 
-    public String checaUsuario () {
-        return "";
+    public void criaNovoUsuario () {
+        if (password.equals(passwordConfirmar)) {
+            erro = "Usuario inserido com sucesso";
+        } else {
+            erro = "A senha e confirmação diferem";
+        }
     }
 
     public String getErro() {
