@@ -95,32 +95,41 @@
                 </div>
                 <div id ="colunaB">
                     <h2>PÁGINA DO ADMINISTRADOR</h2><div id="textoLogin"><h:outputLabel value="Olá, #{userBean.nome}"/></div>
-			
-
-
-
                         <f:view>
                                <h:body>
                                         <h:form>
+
                                             <h3> Criar Usuário:</h3>
                                             <div id="campos">
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Nome:"/>
-                                            <div id="criarEspaco"> <h:inputText value="#{newUserBean.nome}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputText id ="campo3" value="#{newUserBean.nome}" required="false"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Login:"/>
-                                            <div id="criarEspaco"> <h:inputText value="#{newUserBean.login}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputText id ="campo1" value="#{newUserBean.login}" required="false"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Senha:" />
-                                            <div id="criarEspaco"> <h:inputSecret value="#{newUserBean.password}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputSecret id ="campo2"  value="#{newUserBean.password}" required="false"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Confirme senha:" /> 
-                                            <div id="criarEspaco"> <h:inputSecret value="#{newUserBean.passwordConfirmar}" required="true"/></div></div>
+                                            <div id="criarEspaco"> <h:inputSecret id ="campo4" value="#{newUserBean.passwordConfirmar}" required="false"/></div></div>
+                                            <br></br>
+                                            <div id="radio">
+                                            <h:selectOneRadio value="#{newUserBean.nivelAcesso}">
+                                                    <f:selectItem itemValue="0" itemLabel="0 - Usuario Comum" />
+                                                    <f:selectItem itemValue="1" itemLabel="1 - Usuário Administrador" />
+                                            </h:selectOneRadio></div>
                                             <br></br>
                                             <br></br>
-                                            <br></br>
-                                            <div id="botoes">
-                                                <h:commandButton image="images/finabinho.jpg" value="" action="#{newUserBean.criaNovoUsuario}"/></div>
+                                            <div id="botoes2">
+                                                <div id="botao1">
+                                                    <h:commandButton image="images/add.png" value="Novo" action="#{newUserBean.criaNovoUsuario}"/>
+                                                </div>
+                                                <div id="botao2">
+                                                    <h:commandButton image="images/cancel.png" value="Reset" action="#{newUserBean.resetaUsuario}"/>
+                                                    
+                                                </div>
+                                            </div>
                                             </div>
                                             <div id="fotoAddUser"></div>
                                             <br></br>

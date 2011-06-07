@@ -359,12 +359,31 @@ body {
 }
 
 #textoErroNovo {
-    margin-top: 320px;
-    margin-left: 40%;
+    margin-top: 350px;
+    margin-left: 30%;
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: bold;
     color: rgb(255,0,0);
+}
+
+#botoes2 {
+    width: 300px;
+    position:absolute;
+    margin-left: 4%;
+}
+
+#botao1 {
+    margin-left: 0px;
+}
+
+#botao2 {
+    margin-top: -46px;
+    margin-left: 42%;
+}
+
+#radio {
+    margin-left: -10px;
 }
 
 #textoLogin {
