@@ -10,9 +10,8 @@ import conexao.UsuarioDAO;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
 /**
  *
@@ -93,6 +92,11 @@ public class UsuarioBean {
     }
 
     public String checaUsuario () {
+        if (this.login.equals("") || this.password.equals("")) {
+            erro = "Campos não preenchidos. Favor colocá-los";
+            return "acessoregistro.xhtml";
+        } else {
+
         Usuario usuario=null;
         UsuarioDAO userDao = new UsuarioDAO();
         try {
@@ -110,9 +114,9 @@ public class UsuarioBean {
             return "pagadministrador.xhtml";
         } else {
             erro = "Senha ou Login incorreto(s)";
-            return "";
+            return "acessoregistro.xhtml";
         }
-
+        }
     }
     
 }
