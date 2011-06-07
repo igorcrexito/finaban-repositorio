@@ -97,11 +97,16 @@
                     <h2>PÁGINA DO ADMINISTRADOR</h2><div id="textoLogin"><h:outputLabel value="Olá, #{userBean.nome}"/></div>
 			
 
+
+
                         <f:view>
                                <h:body>
                                         <h:form>
                                             <h3> Criar Usuário:</h3>
                                             <div id="campos">
+                                            <br></br>
+                                            <div id="texto"> <h:outputLabel value="Nome:"/>
+                                            <div id="criarEspaco"> <h:inputText value="#{userBean.nome}" required="true"/></div></div>
                                             <br></br>
                                             <div id="texto"> <h:outputLabel value="Login:"/>
                                             <div id="criarEspaco"> <h:inputText value="#{userBean.login}" required="true"/></div></div>
