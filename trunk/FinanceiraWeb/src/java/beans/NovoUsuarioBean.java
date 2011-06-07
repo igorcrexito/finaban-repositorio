@@ -40,13 +40,17 @@ public class NovoUsuarioBean {
     }
 
 
-    public void criaNovoUsuario () {
+    public String criaNovoUsuario () {
         checaTodos();
+        if (!erro.equals("")) {
+            erro= "Todos os campos precisam ser preenchidos";
+            return "pagadministrador.xhtml";
+        }
+        
         UsuarioDAO userDao = new UsuarioDAO();
         boolean valid = true;
-        System.out.println(nivelAcesso + "nivel");
-        valid = userDao.checaLoginValido(this.login);
 
+        valid = userDao.checaLoginValido(this.login);
 
         if(valid) {
             erro= "";
@@ -62,15 +66,23 @@ public class NovoUsuarioBean {
             erro = "A senha e confirmação diferem";
             checaTodos();
         }
+        UsuarioBean user = (UsuarioBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userBean");
 
-        if (erro.equals("Usuario inserido com sucesso")) {
-            userDao.inserirUsuario(login, password, nome, Integer.parseInt(nivelAcesso));
+        if (user.getNome()!=null || !user.getNome().equals("")) {
+            if (erro.equals("Usuario inserido com sucesso")) {
+                userDao.inserirUsuario(login, password, nome, Integer.parseInt(nivelAcesso));
+                return "pagadministrador.xhtml";
+            } else {
+                return "pagadministrador.xhtml";
+            }
+        } else {
+            erro="Não há usuário logado";
+            return "pagadministrador.xhtml";
         }
-;
     }
 
     public void checaTodos() {
-        if (this.login.equals("") || this.nome.equals("") || this.password.equals("") || this.passwordConfirmar.equals("")) {
+        if (this.login.equals("") || this.nome.equals("") || this.password.equals("") || this.passwordConfirmar.equals("") || this.nivelAcesso.equals("")) {
             erro = "Todos os campos precisam ser preenchidos";
         } 
     }
@@ -82,6 +94,8 @@ public class NovoUsuarioBean {
         this.password = "";
         this.erro="";
         this.nivelAcesso="";
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userBean", new UsuarioBean());
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("newUserBean", new NovoUsuarioBean());
         return "home.xhtml";
         
     }
