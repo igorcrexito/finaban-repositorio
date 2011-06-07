@@ -246,11 +246,11 @@ body {
 
 #fotoAddUser {
     background: url(images/adduser.jpg) no-repeat; /* Insere a imagem */
-    margin-left: 50%;
+    margin-left: 40%;
     margin-top: -250px;
     float: left;
-    width:25%;
-    height: 250px;
+    width:40%;
+    height: 400px;
 }
 
 #botoes {
