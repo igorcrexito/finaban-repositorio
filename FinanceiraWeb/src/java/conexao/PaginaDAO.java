@@ -46,8 +46,9 @@ public class PaginaDAO {
 
         //conecta3g.conecta();
         String tabela = "paginas";
-
-        conexao.execute("UPDATE " + tabela + " SET conteudo = '" + conteudo + "'WHERE nome = '" + nome + "'");
+        String SQL = "UPDATE " + tabela + " SET conteudo = '" + conteudo + "'WHERE nome = '" + nome + "'";
+        
+        conexao.execute(SQL);
 
         //conecta3g.desconecta();
 

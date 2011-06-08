@@ -59,6 +59,13 @@ public class PaginaBean {
         }
     }
 
+    public String redirecionaPag() {
+        if (nome==null || nome.equals(""))
+            return "home.xhtml";
+        else
+            return "pagadministrador";
+    }
+
     public void acionaQuemSomos() {
         nome="quemsomos";
         Pagina pag=null;

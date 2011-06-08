@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,6 +46,8 @@
 </head>
 <body>
 
+     <f:view>
+         <f:event type="preRenderView" listener="#{pagBean.acionaImportExport}"/>
 
       <script>
         //Coloque aqui o número de itens de menu
@@ -94,13 +98,8 @@
                 <div id ="colunaB">
                         <h2>IMPORTAÇÃO - EXPORTAÇÃO:</h2>
 			<div class="box1">
-                                <ul>
-					<li>É um conjunto de serviços de factoring voltado para sociedades estrangeiras que esportam seus produtos no Brasil.
-
-<br></br> <br></br>Pacote de serviços<br></br>
-- Gestão do credito. Gestao especifica da cobrança. Gestão dos fluxos de caixa.<br></br>
-- Cobertura contra o risco do credito. Possibilidade de anular os riscos de inademplencia com uma operação de factoring<br></br>
- </li>
+                               <ul>
+                                <h:outputText escape="false" value="#{pagBean.conteudo}"/>
 				</ul>
 			</div>
                         <div id="fotoservicos"></div>
@@ -111,5 +110,6 @@
 	<div id="footer">
 		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
 	</div>
+</f:view>
 </body>
 </html>
