@@ -55,7 +55,6 @@ public class PaginaBean {
         }
             nome = pag.getNome();
             conteudo = pag.getConteudo();
-            System.out.println("lucky conteudo" + conteudo);
             erro = null;
         }
     }
@@ -71,6 +70,20 @@ public class PaginaBean {
         }
             nome = pag.getNome();
             conteudo = pag.getConteudo();
+        }
+
+public void acionaProSolvendo() {
+        nome="prosolvendo";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+            System.out.println(conteudo);
         }
 
 
