@@ -10,8 +10,9 @@ import conexao.PaginaDAO;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
@@ -54,9 +55,24 @@ public class PaginaBean {
         }
             nome = pag.getNome();
             conteudo = pag.getConteudo();
+            System.out.println("lucky conteudo" + conteudo);
             erro = null;
         }
     }
+
+  public void acionaFaleConosco() {
+        nome="faleconosco";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
 
      public void salvaPagina() {
         if (this.nome==null || this.nome.equals("")) {

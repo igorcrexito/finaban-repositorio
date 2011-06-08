@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -38,11 +40,14 @@
 	function volta(qq){
 	  document.getElementById(qq).className="itens_menu"
 	}
+
         //]]>
 	</script> 
 
 </head>
 <body>
+    <f:view>
+        <f:event type="preRenderView" listener="#{pagBean.acionaFaleConosco}"/>
 
      <script>
         //Coloque aqui o número de itens de menu
@@ -59,6 +64,7 @@
 
 </div>
  <div id="subbody">
+     <h:commandButton action="#{pagBean.acionaFaleConosco}" id="buttonId" style="display: none"/>
             <div id="box2colunas">
                 <div id ="colunaA">
                     <ul id="menu">
@@ -94,13 +100,7 @@
                         <h2>FALE CONOSCO:</h2>
 			<div class="box1">
                                 <ul>
-					<li>&raquo;&nbsp;<strong>ENDEREÇO:</strong> Rua dos Alfeneiros, nº4. Feira de Santana - Bahia. CEP 44089-126</li>
-                                        <br></br>
-					<li>&raquo;&nbsp;<strong>TELEFONE:</strong> (75) 8842-2008</li>
-                                        <br></br>
-					<li>&raquo;&nbsp;<strong>FAX:</strong> (75) 8842-2008</li>
-                                        <br></br>
-					<li>&raquo;&nbsp;<strong>EMAIL:</strong> pragamovie@gmail.com</li>
+					<h:outputText escape="false" value="#{pagBean.conteudo}"/>
 				</ul>
 			</div>
                         <div id="foto"></div>
@@ -111,5 +111,6 @@
 	<div id="footer">
 		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
 	</div>
+        </f:view>
 </body>
 </html>
