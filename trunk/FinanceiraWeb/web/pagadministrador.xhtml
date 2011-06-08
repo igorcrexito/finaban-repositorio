@@ -142,6 +142,7 @@
                                             <h3> Editar Campos das Páginas:</h3>
                                             <h:selectOneRadio value="#{pagBean.nome}">
                                                     <f:selectItem itemValue="home" itemLabel="Home" />
+                                                    <f:selectItem itemValue="faleconosco" itemLabel="Fale Conosco" />
                                                     <f:selectItem itemValue="prosolvendo" itemLabel="Pró-Solvendo" />
                                             </h:selectOneRadio>
                                             <br></br><br></br>
@@ -150,12 +151,8 @@
 
                                             <h:panelGrid columns="2" style="margin-top:10px">
                                                 <h:commandButton value="Carrega" action="#{pagBean.checaPagina}"></h:commandButton>
-                                                <h:commandButton value="Salva" action="#{pagBean.checaPagina}"></h:commandButton>
+                                                <h:commandButton value="Salva" action="#{pagBean.salvaPagina}"></h:commandButton>
                                             </h:panelGrid>
-
-                                            <p:dialog header="Content" widgetVar="dlg" showEffect="fade" hideEffect="fade" modal="true">
-                                                <h:outputText id="display" value="#{newUserBean.erro}" escape="false" />
-                                            </p:dialog>
                                                 </div>
                                         </h:form>
                                 </h:body>
