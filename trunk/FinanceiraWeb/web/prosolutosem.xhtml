@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,6 +46,8 @@
 </head>
 <body>
 
+     <f:view>
+         <f:event type="preRenderView" listener="#{pagBean.acionaProSolutoSem}"/>
 
       <script>
         //Coloque aqui o número de itens de menu
@@ -95,21 +99,7 @@
                         <h2>PRO-SOLUTO SEM NOTIFICAÇÃO:</h2>
 			<div class="box1">
                                 <ul>
-					<li>É um produto dirigido para empresas que querem se tutelar contra o risco de inademplencia, sem delegar a Finaban a atividade de gestão do credito.<br></br>
-<br></br>O produto caracteriza-se por:<br></br>
-- a cessão do credito não vem comunicada ao devedor, que, portanto, desconhece o vinculo entre a empresa credora e Finaban.<br></br>
-- a avaliação de cada cliente, ao fim de atribui-lhe um teto de garantia.<br></br>
-- a empresa factorada continua a gestão do credito para todo o tempo que o devedor se demonstrar pontual com os pagamentos.<br></br>
-- os devedores recebem a comunicação da existência de um contrato de factoring somente se não se demonstrar regulares nos pagamentos.<br></br>
-- quando os devedores são notificados sobre a existência de um contrato de factoring, Finaban passa a gestir o credito a receber  e paga à factorada, numa data precedentemente estabelecida, o valor concordado.<br></br>
-
-<br></br>O factoring pro-soluto sem notificação permite às empresas:<br></br>
-- de poder contar sobre uma avaliação previa do risco e, em seguida, de monitorar a regularidade nos pagamentos.<br></br>
-- de ter a garantia sobre o pagamento, transferindo sobre Finaban o risco da operação.<br></br>
-- de manter dentro da própria estrutura a gestão financeira.<br></br>
-
-<br></br>O factoring pro-soluto sem notificação pode aplicado à totalidade ou a uma parte do credito.  
- </li>
+                                <h:outputText escape="false" value="#{pagBean.conteudo}"/>
 				</ul>
 			</div>
                         <div id="fotoservicos"></div>
@@ -120,5 +110,6 @@
 	<div id="footer">
 		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
 	</div>
+ </f:view>
 </body>
 </html>

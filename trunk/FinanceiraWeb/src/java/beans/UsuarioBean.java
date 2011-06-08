@@ -86,10 +86,7 @@ public class UsuarioBean {
     public void setPasswordConfirmar(String passwordConfirmar) {
         this.passwordConfirmar = passwordConfirmar;
     }
-    
-    public void inserirUsuario(){
-        
-    }
+   
 
     public String checaUsuario () {
         if (this.login.equals("") || this.password.equals("")) {
