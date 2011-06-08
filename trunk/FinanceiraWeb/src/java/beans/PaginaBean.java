@@ -59,8 +59,87 @@ public class PaginaBean {
         }
     }
 
+    public void acionaQuemSomos() {
+        nome="quemsomos";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+
   public void acionaFaleConosco() {
         nome="faleconosco";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+    public void acionaProSolutoCom() {
+        nome="prosolutocom";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+  public void acionaProSolutoSem() {
+        nome="prosolutosem";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+    public void acionaLegislacao() {
+        nome="legislacao";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+      public void acionaMaturity() {
+        nome="maturity";
+        Pagina pag=null;
+        PaginaDAO pagDao = new PaginaDAO();
+        try {
+            pag = pagDao.getPaginaFromNome(nome);
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            nome = pag.getNome();
+            conteudo = pag.getConteudo();
+        }
+
+     public void acionaImportExport() {
+        nome="importexport";
         Pagina pag=null;
         PaginaDAO pagDao = new PaginaDAO();
         try {
