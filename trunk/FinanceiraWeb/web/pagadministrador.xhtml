@@ -156,7 +156,12 @@
                                             </h:selectOneRadio>
                                             <br></br><br></br>
                                             <div id="areaTexto">
-                                                <ui:include src="editor.xhtml"></ui:include>
+                                                <p:editor value="#{pagBean.conteudo}" widgetVar="editor" width="600"/>
+
+                                                <h:panelGrid columns="2" style="margin-top:10px">
+                                                    <h:commandButton value="Carrega" action="#{pagBean.checaPagina}"></h:commandButton>
+                                                    <h:commandButton value="Salva" action="#{pagBean.salvaPagina}"></h:commandButton>
+                                                </h:panelGrid>
                                              </div>
                                         </h:form>
                                 </h:body>
