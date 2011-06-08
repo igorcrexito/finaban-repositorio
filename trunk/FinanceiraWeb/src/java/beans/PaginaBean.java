@@ -10,7 +10,7 @@ import conexao.PaginaDAO;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
 
 /**
@@ -18,7 +18,7 @@ import javax.faces.bean.ManagedBean;
  * @author Nalminha
  */
 @ManagedBean(name="pagBean")
-@RequestScoped
+@SessionScoped
 public class PaginaBean {
 
     private String nome;
@@ -55,6 +55,17 @@ public class PaginaBean {
             nome = pag.getNome();
             conteudo = pag.getConteudo();
             erro = null;
+        }
+    }
+
+     public void salvaPagina() {
+        if (this.nome==null || this.nome.equals("")) {
+            erro = "Campo referente à página deve ser escolhido";
+        } else {
+            Pagina pag=null;
+            PaginaDAO pagDao = new PaginaDAO();
+
+            pagDao.updateConteudo(nome, conteudo);
         }
     }
 
