@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 <!-- Template Design by TheWebhub.com | http://www.thewebhub.com | Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines -->
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -43,8 +45,8 @@
 
 </head>
 <body>
-
-
+<f:view>
+    <f:event type="preRenderView" listener="#{pagBean.acionaMaturity}"/>
       <script>
         //Coloque aqui o número de itens de menu
         n_divs='5'
@@ -95,21 +97,7 @@
                         <h2>MATURITY FACTORING</h2>
 			<div class="box1">
                                 <ul>
-					<li>É um produto muito utilizado por empresas de médio e grande porte, pertencentes aos mais diversificados setores de mercado: importadores e distribuidores de veículos e alimentos, redes de varejo, indústria petrolífera e informática, setor turístico e hoteleiro.
-
-<br></br> <br></br>Com o contrato Maturity factoring, Finaban credita à facturada o valor referente à venda mercantil a prazo, num dia previamente estabelecido (geralmente dois, três dias após o vencimento do prazo  com a parte devedora), caso o pagamento por parte do devedor à facturada não seja efetuado.
-<br></br><br></br>A operação pode ser realizada na modalidade pro-solvendo e pro-soluto.
-
-<br></br><br></br>Vantagens oferecidas por este tipo de contrato:<br></br>
-- otimização do planejamento financeiro e, por conseqüência, da gestão da tesouraria, podendo contar com fluxos de entrada certos;<br></br>
--reduzir as custas do aparato administrativo, especificamente do setor dedicado à gestão e cobrança de créditos;<br></br>
-<br></br>Finaban oferece um serviço completo relativo aos créditos cedidos e, a combinar:<br></br>
-- garantia sobre o bom êxito do negocio (pro-soluto), característica que transfere sobre Finaban o risco de inadimplência do devedor;<br></br>
-- possibilidade de obter antecipações financeiras sobre o valor a receber;<br></br>
-- possibilidade de renegociação da divida com a parte devedora, aspecto que confere ao serviço uma conotação tipicamente comercial, permitindo aos devedores uma renegociação das dividas.<br></br>
-
-<br></br>O Maturity factoring operado por Finaban pode ser realizado tanto sobre o faturado inteiro quanto sobre uma parte.
-</li>
+                                    <h:outputText escape="false" value="#{pagBean.conteudo}"/>
 				</ul>
 			</div>
                         <div id="fotoservicos"></div>
@@ -120,5 +108,6 @@
 	<div id="footer">
 		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
 	</div>
+</f:view>
 </body>
 </html>
