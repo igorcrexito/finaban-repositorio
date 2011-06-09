@@ -140,8 +140,12 @@ public class NovoUsuarioBean {
     }
 
     public void setPassword(String password) {
+        if(!password.equals("")){
         senhacrip = crip.criptografar(password);
         this.password = senhacrip;
+        }
+        else
+        this.password = password;
     }
 
     public String getPasswordConfirmar() {
@@ -149,8 +153,12 @@ public class NovoUsuarioBean {
     }
 
     public void setPasswordConfirmar(String passwordConfirmar) {
+         if(!password.equals("")){
         senhacrip = crip.criptografar(passwordConfirmar);
         this.passwordConfirmar = senhacrip;
+        }
+        else
+            this.passwordConfirmar = passwordConfirmar;
     }
 
 }
