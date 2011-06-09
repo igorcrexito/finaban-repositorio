@@ -16,7 +16,7 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author Nalminha
+ * @author 
  */
 @ManagedBean(name="pagBean")
 @SessionScoped
