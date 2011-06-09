@@ -5,6 +5,7 @@
 
 package beans;
 
+import classes.Criptografia;
 import classes.Usuario;
 import conexao.UsuarioDAO;
 import java.sql.SQLException;
@@ -29,6 +30,8 @@ public class UsuarioBean {
     private int nivelAcesso;
     private String nome;
     private String erro="";
+    Criptografia criptografar = new Criptografia();
+    String senhaCrip;
 
     public UsuarioBean() {
     }
@@ -52,7 +55,8 @@ public class UsuarioBean {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        senhaCrip = criptografar.criptografar(password);
+        this.password = senhaCrip;
     }
 
     public int getNivelAcesso() {
