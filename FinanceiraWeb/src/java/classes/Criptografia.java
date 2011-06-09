@@ -77,7 +77,7 @@ public static String criptografar(String pwd) {
 
 public static void main(String[] args){
 
-        String senha = "porquinho";
+        String senha = "";
 
         String a = (Criptografia.criptografar(senha));
           System.out.println(a + "   " + Criptografia.criptografar(a));
