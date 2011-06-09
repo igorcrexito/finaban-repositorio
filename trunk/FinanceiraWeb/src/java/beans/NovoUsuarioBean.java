@@ -29,7 +29,7 @@ public class NovoUsuarioBean {
     private String nome;
     private String erro="";
     Criptografia crip = new Criptografia();
-    String senhacrip;
+    private String senhacrip;
 
     public NovoUsuarioBean() {
     }
@@ -44,6 +44,7 @@ public class NovoUsuarioBean {
 
 
     public String criaNovoUsuario () {
+        erro = "";
         checaTodos();
         if (!erro.equals("")) {
             erro= "Todos os campos precisam ser preenchidos";
@@ -74,22 +75,33 @@ public class NovoUsuarioBean {
         if (user.getNome()!=null || !user.getNome().equals("")) {
             if (erro.equals("Usuario inserido com sucesso")) {
                 userDao.inserirUsuario(login, password, nome, Integer.parseInt(nivelAcesso));
+                resetInfo();
                 return "pagadministrador.xhtml";
             } else {
+                 resetInfo();
                 return "pagadministrador.xhtml";
             }
         } else {
+             resetInfo();
             erro="Não há usuário logado";
             return "pagadministrador.xhtml";
         }
     }
 
     public void checaTodos() {
-        if (this.login.equals("") || this.nome.equals("") || this.password.equals("") || this.passwordConfirmar.equals("") || this.nivelAcesso.equals("")) {
+        if (this.login.equals("") || this.nome.equals("") || this.password.equals("") || this.passwordConfirmar.equals("") || this.nivelAcesso==(null)) {
             erro = "Todos os campos precisam ser preenchidos";
         } 
     }
 
+    public void resetInfo(){
+                this.passwordConfirmar = "";
+                this.nome = "";
+                this.login = "";
+                this.password = "";
+                this.senhacrip="";
+                this.nivelAcesso="";
+    }
     public String resetaUsuario () {
         this.passwordConfirmar = "";
         this.nome = "";
@@ -141,11 +153,11 @@ public class NovoUsuarioBean {
 
     public void setPassword(String password) {
         if(!password.equals("")){
-        senhacrip = crip.criptografar(password);
-        this.password = senhacrip;
+            senhacrip = Criptografia.criptografar(password);
+             this.password = senhacrip;
         }
         else
-        this.password = password;
+             this.password = password;
     }
 
     public String getPasswordConfirmar() {
@@ -153,12 +165,12 @@ public class NovoUsuarioBean {
     }
 
     public void setPasswordConfirmar(String passwordConfirmar) {
-         if(!password.equals("")){
-        senhacrip = crip.criptografar(passwordConfirmar);
-        this.passwordConfirmar = senhacrip;
+        if(!passwordConfirmar.equals("")){
+            senhacrip = Criptografia.criptografar(passwordConfirmar);
+            this.passwordConfirmar = senhacrip;
         }
         else
-            this.passwordConfirmar = passwordConfirmar;
+             this.passwordConfirmar = passwordConfirmar;
     }
 
 }
