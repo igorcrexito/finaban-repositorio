@@ -38,6 +38,6 @@ import org.apache.commons.mail.SimpleEmail;
      email.setMsg(mensagem.getMensagem());
      email.addTo("finaban@gmail.com");
      String resposta = email.send();
-     FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "E-mail enviado com sucesso para: " + mensagem.getDestino(), "Informação"));
+     FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "E-mail enviado com sucesso para: " + "finaban@gmail.com", "Informação"));
      }
     }  
