@@ -9,17 +9,20 @@
  <link href="#{facesContext.externalContext.requestContextPath}/resources/css/custom-theme/skin.css" rel="stylesheet" type="text/css" />
  </h:head>
  <h:body>
+     <f:view>
+         <f:event type="preRenderView" listener="#{indexController.fazDestino}"/>
+     </f:view>
  <p:outputPanel id="outputPanelMail">
  <h:form>
  <p:panel header="Envio de e-mail" style="width: 550px">
  <p:messages/>
  <h:panelGrid columns="2">
  <h:outputText value="Para: "/>
- <h:inputText value="#{indexController.mensagem.destino}" size="66"/>
+ <h:outputText value="finaban@gmail.com"/>
  <h:outputText value="Título: "/>
- <h:inputText value="#{indexController.mensagem.titulo}" size="66"/>
+ <h:inputText value="#{indexController.mensagem.titulo}" size="60"/>
  <h:outputText value="Mensagem: "/>
- <h:inputTextarea value="#{indexController.mensagem.mensagem}" cols="63" rows="10"/>
+ <h:inputTextarea value="#{indexController.mensagem.mensagem}" cols="58" rows="10"/>
  </h:panelGrid>
  <p:commandButton value="Enviar e-mail" image="ui-icon-mail-closed" action="#{indexController.enviaEmail}" update="outputPanelMail"/>
  <p:commandButton value="Limpar campos" image="ui-icon-circle-close" action="#{indexController.limpaCampos}" update="outputPanelMail"/>

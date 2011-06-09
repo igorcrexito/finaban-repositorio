@@ -363,6 +363,11 @@ body {
     margin-bottom: 20px;
 }
 
+#areaTextoMail {
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
 #textoErroNovo {
     margin-top: 350px;
     margin-left: 30%;

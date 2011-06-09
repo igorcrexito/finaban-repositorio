@@ -16,14 +16,15 @@ import org.apache.commons.mail.SimpleEmail;
     public class EmailUtils {
 
      private static final String HOSTNAME = "smtp.gmail.com";
-     private static final String USERNAME = "igorcrexito";
-     private static final String PASSWORD = "mudeiessaporra";
-     private static final String EMAILORIGEM = "lari.rsoares@gmail.com";
+     private static final String USERNAME = "finaban";
+     private static final String PASSWORD = "fina123456";
+     private static final String EMAILORIGEM = "finaban@gmail.com";
 
      public static Email conectaEmail() throws EmailException {
      Email email = (Email) new SimpleEmail();
      email.setHostName(HOSTNAME);
      email.setSmtpPort(587);
+     
      email.setAuthenticator(new DefaultAuthenticator(USERNAME, PASSWORD));
      email.setTLS(true);
      email.setFrom(EMAILORIGEM);
@@ -35,7 +36,7 @@ import org.apache.commons.mail.SimpleEmail;
      email = conectaEmail();
      email.setSubject(mensagem.getTitulo());
      email.setMsg(mensagem.getMensagem());
-     email.addTo(mensagem.getDestino());
+     email.addTo("finaban@gmail.com");
      String resposta = email.send();
      FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "E-mail enviado com sucesso para: " + mensagem.getDestino(), "Informação"));
      }
