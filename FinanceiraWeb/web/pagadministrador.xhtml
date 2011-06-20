@@ -49,6 +49,8 @@
 </h:head>
 <body>
 
+    <f:view>
+        <f:event type="preRenderView" listener="#{newUserBean.limpaErro}"/>
 
       <script>
         //Coloque aqui o número de itens de menu
@@ -171,5 +173,6 @@
 	<div id="footer">
 		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
 	</div>
+        </f:view>
 </body>
 </html>
