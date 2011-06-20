@@ -115,6 +115,10 @@ public class NovoUsuarioBean {
         
     }
 
+    public void limpaErro() {
+        this.erro = "";
+    }
+    
     public String getErro() {
         return erro;
     }
