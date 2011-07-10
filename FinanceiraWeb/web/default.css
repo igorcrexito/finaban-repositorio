@@ -244,6 +244,28 @@ body {
     height: 300px;
 }
 
+#fotodinheiro {
+    background: url(images/dinheiro.JPG) no-repeat; /* Insere a imagem */
+    margin-left: 28%;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 40px;
+    float: left;
+    width:50%;
+    height: 300px;
+}
+
+#fotoimport {
+    background: url(images/importexport.JPG) no-repeat; /* Insere a imagem */
+    margin-left: 17%;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 40px;
+    float: left;
+    width:71%;
+    height: 300px;
+}
+
 #fotoAddUser {
     background: url(images/adduser.jpg) no-repeat; /* Insere a imagem */
     margin-left: 40%;
