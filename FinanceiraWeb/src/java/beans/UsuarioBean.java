@@ -20,7 +20,7 @@ import javax.faces.bean.SessionScoped;
  * @author Igor
  */
 @ManagedBean(name="userBean")
-@RequestScoped
+@SessionScoped
 public class UsuarioBean {
 
     
@@ -93,6 +93,13 @@ public class UsuarioBean {
         this.passwordConfirmar = passwordConfirmar;
     }
 
+    public String invalidaUsuario () {
+        this.nome = null;
+        this.erro =null;
+        this.login = null;
+        this.password = null;
+        return "index.xhtml";
+    }
 
     public String checaUsuario () {
         if (this.login.equals("") || this.password.equals("")) {

@@ -102,7 +102,6 @@
                         <f:view>
                                <h:body>
                                         <h:form>
-
                                             <h3> Criar Usu&#225;rio</h3>
                                             <div id="campos">
                                             <br></br>
@@ -130,7 +129,7 @@
                                                     <h:commandButton image="images/add.png" value="Novo" action="#{newUserBean.criaNovoUsuario}"/>
                                                 </div>
                                                 <div id="botao2">
-                                                    <h:commandButton image="images/cancel.png" value="Reset" action=""/>
+                                                    <h:commandButton image="images/cancel.png" value="Reset" action="#{userBean.invalidaUsuario}"/>
                                                     
                                                 </div>
                                             </div>

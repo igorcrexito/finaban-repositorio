@@ -14,19 +14,27 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.el.ValueBinding;
 
 /**
  *
  * @author 
  */
 @ManagedBean(name="pagBean")
-@RequestScoped
+@SessionScoped
 public class PaginaBean {
 
     private String nome;
     private String erro;
     private String conteudo;
+    private String nomeUser;
+
+    public String getNomeUser() {
+        return nomeUser;
+    }
+
+    public void setNomeUser(String nomeUser) {
+        this.nomeUser = nomeUser;
+    }
 
     public String getConteudo() {
         return conteudo;
@@ -45,6 +53,9 @@ public class PaginaBean {
     }
 
     public void checaPagina() {
+        UsuarioBean userBean = (UsuarioBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userBean");
+
+        if (userBean.getNome() != null || !userBean.getNome().equals("")) {
         if (this.nome==null || this.nome.equals("")) {
             erro = "Campo referente à página deve ser escolhido";
         } else {
@@ -58,6 +69,7 @@ public class PaginaBean {
             nome = pag.getNome();
             conteudo = pag.getConteudo();
             erro = null;
+        }
         }
     }
 
@@ -229,6 +241,9 @@ public void acionaProSolvendo() {
 
 
      public void salvaPagina() {
+        UsuarioBean userBean = (UsuarioBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userBean");
+
+        if (userBean.getNome() != null || !userBean.getNome().equals("")) {
         if (this.nome==null || this.nome.equals("")) {
             erro = "Campo referente à página deve ser escolhido";
         } else {
@@ -237,6 +252,7 @@ public void acionaProSolvendo() {
 
             pagDao.updateConteudo(nome, conteudo);
         }
+         }
     }
 
     public String getErro() {
