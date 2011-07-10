@@ -57,6 +57,10 @@ public class NovoUsuarioBean {
 
 
     public String criaNovoUsuario () {
+        UsuarioBean userBean = (UsuarioBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userBean");
+
+        if (userBean.getNome() != null || !userBean.getNome().equals("")) {
+
         erro = "";
         checaTodos();
         if (!erro.equals("")) {
@@ -99,6 +103,9 @@ public class NovoUsuarioBean {
             erro="Não há usuário logado";
             return "pagadministrador.xhtml";
         }
+        } else {
+            return "";
+        }
     }
 
     public void checaTodos() {
@@ -131,7 +138,7 @@ public class NovoUsuarioBean {
     public void limpaErro() {
         this.erro = "";
     }
-    
+
     public String getErro() {
         return erro;
     }
