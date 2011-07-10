@@ -13,13 +13,15 @@ import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.el.ValueBinding;
 
 /**
  *
  * @author 
  */
 @ManagedBean(name="pagBean")
-@SessionScoped
+@RequestScoped
 public class PaginaBean {
 
     private String nome;
@@ -58,6 +60,7 @@ public class PaginaBean {
             erro = null;
         }
     }
+
 
     public String redirecionaPag() {
         if (nome==null || nome.equals(""))
