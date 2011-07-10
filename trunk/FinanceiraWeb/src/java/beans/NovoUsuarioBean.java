@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.el.ValueBinding;
 
 
 /**
@@ -40,6 +41,18 @@ public class NovoUsuarioBean {
         this.nome = nome;
         this.login = login;
         this.password = password;
+    }
+    
+    public String invalidaSession() {
+            String expr = "#{" + "NovoUsuarioBean"+ "}";  
+            ValueBinding vb = FacesContext.getCurrentInstance().getApplication().createValueBinding(expr);  
+            vb.setValue(FacesContext.getCurrentInstance(), null); 
+            
+            expr = "#{" + "UsuarioBean"+ "}";  
+            vb = FacesContext.getCurrentInstance().getApplication().createValueBinding(expr);  
+            vb.setValue(FacesContext.getCurrentInstance(), null);
+
+            return "index.xhtml";
     }
 
 

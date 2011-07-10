@@ -130,7 +130,7 @@
                                                     <h:commandButton image="images/add.png" value="Novo" action="#{newUserBean.criaNovoUsuario}"/>
                                                 </div>
                                                 <div id="botao2">
-                                                    <h:commandButton image="images/cancel.png" value="Reset" action="#{newUserBean.resetaUsuario}"/>
+                                                    <h:commandButton image="images/cancel.png" value="Reset" action=""/>
                                                     
                                                 </div>
                                             </div>
@@ -144,15 +144,19 @@
                                             </div>
                                             <h3> Editar Campos das P&#225;ginas</h3>
                                              <br></br>Escolha a p&#225;gina:
-                                            <h:selectOneRadio value="#{pagBean.nome}">
+                                            <h:selectOneRadio value="#{pagBean.nome}" layout="pageDirection">
                                                     <f:selectItem itemValue="quemsomos" itemLabel="Home" />
                                                     <f:selectItem itemValue="faleconosco" itemLabel="Fale Conosco" />
                                                     <f:selectItem itemValue="prosolvendo" itemLabel="Pr&#243;-Solvendo" />
                                                     <f:selectItem itemValue="importexport" itemLabel="Importa&#231;&#227;o-Exporta&#231;&#227;o" />
                                                     <f:selectItem itemValue="legislacao" itemLabel="Legisla&#231;&#227;o" />
                                                     <f:selectItem itemValue="maturity" itemLabel="Maturity"/>
-                                                    <f:selectItem itemValue="prosolutocom" itemLabel="Pro-Soluto com Notifica&#231;&#227;o"/>
-                                                    <f:selectItem itemValue="prosolutosem" itemLabel="Pro-Soluto sem Notifica&#231;&#227;o"/>
+                                                    <f:selectItem itemValue="introducao" itemLabel="Introdu&#231;&#227;o"/>
+                                                    <f:selectItem itemValue="gestao" itemLabel="Gest&#227;o"/>
+                                                    <f:selectItem itemValue="antecipacao" itemLabel="Antecipa&#231;&#227;o"/>
+                                                    <f:selectItem itemValue="custos" itemLabel="Custos"/>
+                                                    <f:selectItem itemValue="prosolutocom" itemLabel="Pro-Solvendo com Notifica&#231;&#227;o"/>
+                                                    <f:selectItem itemValue="prosolutosem" itemLabel="Pro-Solvendo sem Notifica&#231;&#227;o"/>
                                             </h:selectOneRadio>
                                             <br></br><br></br>
                                             <div id="areaTexto">
@@ -171,7 +175,7 @@
         </div>
 
 	<div id="footer">
-		<p>Copyright &copy; 2011 FINABAN. Developed by <a href="http://www.thewebhub.com/">  thewebhub</a> and custom by TecnoPigs Ltda.</p>
+		<p>Copyright &copy; 2011 FINABAN. Developed by TecnoPigs Ltda.</p>
 	</div>
         </f:view>
 </body>

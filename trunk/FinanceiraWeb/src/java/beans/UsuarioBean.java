@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 
 /**
@@ -19,12 +20,13 @@ import javax.faces.bean.SessionScoped;
  * @author Igor
  */
 @ManagedBean(name="userBean")
-@SessionScoped
+@RequestScoped
 public class UsuarioBean {
 
     
     /** Creates a new instance of UsuarioBean */
     private String login;
+    private boolean logado;
     private String password;
     private String passwordConfirmar;
     private int nivelAcesso;
@@ -90,7 +92,7 @@ public class UsuarioBean {
     public void setPasswordConfirmar(String passwordConfirmar) {
         this.passwordConfirmar = passwordConfirmar;
     }
-   
+
 
     public String checaUsuario () {
         if (this.login.equals("") || this.password.equals("")) {
