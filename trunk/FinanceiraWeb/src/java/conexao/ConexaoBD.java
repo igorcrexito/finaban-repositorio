@@ -36,8 +36,8 @@ public class ConexaoBD{
 
      this.DRIVER_JBDC = "com.mysql.jdbc.Driver";
      this.URL = "jdbc:mysql://localhost/finaban";
-     this.usuario = "root";
-     this.senha = "porquinho";
+     this.usuario = "igorcrexito";
+     this.senha = "papapop12";
      conecta();
 
     }
