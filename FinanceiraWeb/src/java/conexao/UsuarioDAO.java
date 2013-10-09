@@ -26,10 +26,10 @@ public class UsuarioDAO {
 
     public Usuario getUsuariosFromLoginSenha (String login, String senha) throws SQLException {
 
-
+        conexao.conecta();
 
         String SQL_string = "SELECT * FROM usuario WHERE " +
-                "LOGIN LIKE'%" + login + "%'" + "AND SENHA LIKE '%"+senha+"%'";
+                "LOGIN LIKE '%"+login+"%'" + "AND SENHA LIKE '%"+senha+"%'";
 
         ResultSet rs= conexao.executeSql(SQL_string);
         rs.first();
@@ -37,24 +37,34 @@ public class UsuarioDAO {
         String nome = rs.getString("nome");
         int nivelAcesso = rs.getInt("nivelAcesso");
 
+        conexao.desconecta();
         
         if (nome!=null || !nome.equals("")) {
             return new Usuario(login,senha,nivelAcesso,nome);
         } else {
             return null;
         }
+        
     }
 
     public void inserirUsuario(String login, String senha, String nome, int nivelAcesso) {
+
+        conexao.conecta();
 
         String SQL_String = "INSERT INTO USUARIO (login,senha,nome,nivelAcesso)" +
                 " VALUES ('" + login + "', '" + senha + "', '" + nome + "', '" + nivelAcesso+"')";
 
          conexao.execute(SQL_String);
+         
+         conexao.desconecta();
+
     }
 
     public boolean checaLoginValido(String login) {
-         String SQL_string = "SELECT COUNT(*) FROM USUARIO WHERE LOGIN LIKE'%" +login+ "%'";
+         
+        conexao.conecta();
+
+        String SQL_string = "SELECT COUNT(*) FROM USUARIO WHERE LOGIN LIKE'%" +login+ "%'";
 
         ResultSet rs= conexao.executeSql(SQL_string);
         try {
@@ -68,6 +78,9 @@ public class UsuarioDAO {
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        conexao.desconecta();
+
 
         if (n>0)
             return false;
