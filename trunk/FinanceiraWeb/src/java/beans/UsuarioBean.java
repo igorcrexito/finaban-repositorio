@@ -57,7 +57,8 @@ public class UsuarioBean {
     }
 
     public void setPassword(String password) {
-        senhaCrip = criptografar.criptografar(password);
+        //senhaCrip = criptografar.criptografar(password);
+        senhaCrip = password;
         this.password = senhaCrip;
     }
 
